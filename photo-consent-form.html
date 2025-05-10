@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Consent Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f7f1e3; padding: 20px; }
+    .form-container { background: white; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 0 10px #aaa; }
+    input, label { display: block; margin: 10px 0; }
+    .btn { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+    .btn:hover { background-color: #45a049; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Photo Consent Form</h2>
+    <p>This form is to request your permission to use your child's photos for school newsletters and the school website.</p>
+    <form onsubmit="alert('Form submitted! Thank you.'); return false;">
+      <label for="parentName">Parent's Name:</label>
+      <input type="text" id="parentName" required>
+
+      <label for="studentName">Child's Name:</label>
+      <input type="text" id="studentName" required>
+
+      <label>Do you give permission to use photos of your child?</label>
+      <input type="radio" name="consent" value="yes" required> Yes
+      <input type="radio" name="consent" value="no"> No
+
+      <br>
+      <button class="btn" type="submit">Submit Form</button>
+    </form>
+  </div>
+</body>
+</html>
