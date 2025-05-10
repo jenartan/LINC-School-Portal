@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Maple Grove School Portal</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 20px; }
+    .login-box, .dashboard { background: white; padding: 20px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 0 10px #aaa; }
+    .dashboard { display: none; }
+    .btn { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+    .btn:hover { background-color: #45a049; }
+    h2, h3 { color: #333; }
+    .alert { color: red; }
+    details { margin-top: 10px; }
+    summary { cursor: pointer; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<div class="login-box" id="loginBox">
+  <h2>Parent Login</h2>
+  <p>Username: <strong>parent123</strong></p>
+  <p>Password: <strong>maple2024</strong></p>
+  <input type="text" id="username" placeholder="Enter username" /><br><br>
+  <input type="password" id="password" placeholder="Enter password" /><br><br>
+  <button class="btn" onclick="login()">Login</button>
+  <p class="alert" id="alertBox"></p>
+</div>
+
+<div class="dashboard" id="dashboard">
+  <h2>Welcome, Parent!</h2>
+  <p><strong>Child's Name:</strong> Amina Hassan</p>
+  <p><strong>Grade:</strong> 5</p>
+  
+  <h3>Recent Grades</h3>
+  <ul>
+    <li>Math: 83%</li>
+    <li>English: 76%</li>
+    <li>Science: 88%</li>
+  </ul>
+  
+  <h3>School Announcements</h3>
+  <ul>
+    <li>📅 Parent-Teacher Conferences: May 15</li>
+    <li>🎉 School BBQ: June 3</li>
+    <li>🚌 No school on May 20 (Victoria Day)</li>
+  </ul>
+
+  <h3>Documents & Forms</h3>
+  <details>
+    <summary>📝 School Trip Permission Form</summary>
+    <p>Your child’s class will go to the Museum of Natural History on May 25. Please complete and return the permission form by May 20.</p>
+    <p><a href="trip-permission-form.html" target="_blank">Open Permission Form</a></p>
+  </details>
+  <details>
+    <summary>📸 Photo Consent Form</summary>
+    <p>We ask for your permission to take photos of your child for school newsletters and website. Please review and submit the form.</p>
+    <p><a href="photo-consent-form.html" target="_blank">Open Photo Consent Form</a></p>
+  </details>
+  <details>
+    <summary>📚 Library Book Return Reminder</summary>
+    <p>All school library books must be returned by June 10. Lost books must be paid for at the school office.</p>
+  </details>
+  
+  <h3>Contact the School</h3>
+  <p>Email: <a href="mailto:office@maplegrove.ca">office@maplegrove.ca</a></p>
+  <p>Phone: 519-555-1234</p>
+</div>
+
+<script>
+  function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const alertBox = document.getElementById("alertBox");
+
+    if (username === "parent123" && password === "maple2024") {
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("dashboard").style.display = "block";
+    } else {
+      alertBox.textContent = "Incorrect username or password. Please try again.";
+    }
+  }
+</script>
+
+</body>
+</html>
