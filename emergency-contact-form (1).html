@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emergency Contact Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #eaf7f1; padding: 20px; }
+    .form-container { background: white; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 0 10px #aaa; }
+    input, label { display: block; margin: 10px 0; }
+    .btn { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+    .btn:hover { background-color: #45a049; }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Emergency Contact Form</h2>
+    <p>Please provide the contact information of a person we can call in an emergency.</p>
+    <form onsubmit="alert('Form submitted! Thank you.'); return false;">
+      <label for="parentName">Parent's Name:</label>
+      <input type="text" id="parentName" required>
+
+      <label for="studentName">Child's Name:</label>
+      <input type="text" id="studentName" required>
+
+      <label for="contactName">Emergency Contact Name:</label>
+      <input type="text" id="contactName" required>
+
+      <label for="contactPhone">Emergency Contact Phone Number:</label>
+      <input type="tel" id="contactPhone" required>
+
+      <label for="relationship">Relationship to Child:</label>
+      <input type="text" id="relationship" required>
+
+      <br>
+      <button class="btn" type="submit">Submit Form</button>
+    </form>
+  </div>
+</body>
+</html>
